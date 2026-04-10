@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddheshwar Dham | Namchi Char Dham</title>
+    <meta name="description" content="Visit Siddheshwar Dham in Namchi, Sikkim. See the big Shiva statue and holy temples in one place.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        primary: { // Pink
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            900: '#831843',
+                        },
+                        secondary: { // Blue
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        accent: { // Green
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+        .nav-scrolled a {
+            color: #1f2937;
+        }
+        .nav-scrolled .mobile-menu-btn {
+            color: #1f2937;
+        }
+        .nav-scrolled .logo-text {
+            color: #ec4899;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-primary-50 antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-2 text-white logo-text font-serif text-2xl font-bold transition-colors">
+                    <i class="fa-solid fa-om text-primary-500"></i>
+                    Siddheshwar Dham
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 text-white font-medium items-center">
+                    <a href="#overview" class="hover:text-primary-500 transition-colors">Overview</a>
+                    <a href="#about" class="hover:text-primary-500 transition-colors">The Story</a>
+                    <a href="#architecture" class="hover:text-primary-500 transition-colors">What to See</a>
+                    <a href="#gallery" class="hover:text-primary-500 transition-colors">Photos</a>
+                    <a href="#visitor-info" class="hover:text-primary-500 transition-colors">Guide</a>
+                    <a href="#travel" class="hover:text-primary-500 transition-colors">Travel</a>
+                    <a href="#nearby" class="hover:text-primary-500 transition-colors">Nearby</a>
+                    <a href="#visitor-info" class="bg-primary-500 text-white px-5 py-2 rounded-full hover:bg-primary-600 transition-colors shadow-lg border-none">Plan Visit</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white mobile-menu-btn text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl flex-col divide-y divide-gray-100">
+            <a href="#overview" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">Overview</a>
+            <a href="#about" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">The Story</a>
+            <a href="#architecture" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">What to See</a>
+            <a href="#gallery" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">Photos</a>
+            <a href="#visitor-info" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">Guide</a>
+            <a href="#travel" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">Travel</a>
+            <a href="#nearby" class="px-6 py-4 text-gray-800 hover:bg-primary-50 hover:text-primary-600">Nearby</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center">
+        <img src="./assets/front.jpg" alt="Mountain Temple" class="absolute inset-0 w-full h-full object-cover z-0" />
+        <div class="absolute inset-0 hero-overlay z-0"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-primary-500/20 border border-primary-500/50 text-primary-100 text-sm font-semibold tracking-wider mb-4 uppercase backdrop-blur-sm">
+                Namchi, South Sikkim
+            </span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                A Beautiful Holy Place in the Mountains
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto drop-shadow">
+                See the giant 108-foot Lord Shiva statue and replicas of India's most famous holy temples all in one beautiful park.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#architecture" class="bg-primary-500 text-white font-medium px-8 py-3 rounded-full hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    See What's Inside
+                </a>
+                <a href="#visitor-info" class="bg-white/20 backdrop-blur-md text-white border border-white/40 font-medium px-8 py-3 rounded-full hover:bg-white/30 transition-all">
+                    Plan Your Trip
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Siddheshwar Dham Overview -->
+    <section id="overview" class="py-20 bg-primary-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-sm text-primary-600 font-bold tracking-widest uppercase mb-2">Introduction</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">What is Siddheshwar Dham?</h3>
+                <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-8">
+                    Siddheshwar Dham, also known as **Namchi Char Dham**, is a huge park for culture and prayer. It covers about 29 hectares of land on top of a hill. It was built to show the world the beauty of Indian traditions right here in the mountains of Sikkim.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary-100">
+                        <div class="text-primary-500 text-3xl mb-3"><i class="fa-solid fa-mountain"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-2">High View</h4>
+                        <p class="text-sm text-gray-600">Located 1,315 meters high with a clear view of Mount Kanchenjunga.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary-100">
+                        <div class="text-secondary-500 text-3xl mb-3"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-2">Mini-India</h4>
+                        <p class="text-sm text-gray-600">A place where you can see all of India's most holy sites in one day.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-primary-100">
+                        <div class="text-accent-500 text-3xl mb-3"><i class="fa-solid fa-heart"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-2">Soul Healing</h4>
+                        <p class="text-sm text-gray-600">A quiet space built to make your heart and mind feel happy and peaceful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction & History -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="./assets/home-page.jpg" alt="Shiva Statue" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-primary-500 text-white p-6 rounded-xl shadow-xl hidden md:block max-w-xs">
+                            <p class="font-serif font-bold text-xl mb-1">Opened in</p>
+                            <p class="text-primary-100">November 2011</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-sm text-secondary-600 font-bold tracking-widest uppercase mb-2">The Story</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">The Magic of Solophok Hill</h3>
+                    
+                    <p class="text-gray-600 mb-4 leading-relaxed text-lg">
+                        Solophok Hill is a very special place. Local people believe that if you visit this hill even once, all your bad deeds will be washed away and you will feel fresh and clean.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        There is an old story from the Mahabharata about this hill. It says that Arjuna came here to pray to Lord Shiva. Shiva came to meet him dressed as a hunter to test how brave and good he was. This temple was built to celebrate that story and to bring people from all over India to South Sikkim.
+                    </p>
+                    
+                    <div class="bg-accent-50 p-6 rounded-xl border-l-4 border-accent-500 mb-6">
+                        <h4 class="font-bold text-gray-900 mb-2">A Gift for Everyone</h4>
+                        <p class="text-sm text-gray-600">
+                            The Government of Sikkim built this place so that people can see all the famous holy sites of India in just one day, while enjoying the fresh mountain air.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture & Features Grid -->
+    <section id="architecture" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm text-secondary-600 font-bold tracking-widest uppercase mb-2">What to see</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Amazing Things to Explore</h3>
+                <p class="text-gray-600">You don't have to travel thousands of miles. We have brought the best parts of India's culture here to Namchi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 108-foot Shiva -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center text-secondary-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-om"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Giant Shiva Statue</h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        A huge 108-foot tall statue of Lord Shiva sitting in peace. It is very strong and can withstand mountain winds and earthquakes.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Shiny blue color</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Water flows like a river</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Holds his trident & drum</li>
+                    </ul>
+                </div>
+
+                <!-- 12 Jyotirlingas -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center text-secondary-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-place-of-worship"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">12 Holy Shrines</h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        We have built smaller versions of the 12 most famous Shiva temples (Jyotirlingas) from all over India in a circle.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Walk once to see all 12</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Just like the real ones</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Very easy for elders</li>
+                    </ul>
+                </div>
+
+                <!-- Char Dham Replicas -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center text-secondary-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">The 4 Main Dhams</h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Visit the four most holy places of India (Badrinath, Puri, Dwarka, Rameshwaram) without leaving Sikkim.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Beautiful carvings</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Real-life sizes</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Peaceful and quiet</li>
+                    </ul>
+                </div>
+
+                <!-- Kirateshwar & Sai Baba -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center text-secondary-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Local Statues</h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        We also have an 18-foot statue of Shiva as a hunter (Kirateshwar) to show our local Sikkim culture and traditions.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Bow and arrow in hand</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Local Sikkim history</li>
+                        <li><i class="fa-solid fa-check text-accent-500 mr-2"></i> Golden Sai Baba Mandir</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-20 bg-primary-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-sm text-primary-600 font-bold tracking-widest uppercase mb-2">Photos</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">A Look at the Beauty</h3>
+                <p class="text-gray-600 mt-4">Take a look at these photos of the temple and the beautiful mountains around it.</p>
+            </div>
+
+            <!-- Bento Box Grid Layout (Very Stable) -->
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 max-w-6xl mx-auto h-auto md:h-[600px]">
+                
+                <!-- Main Large Photo -->
+                <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-200 min-h-[300px] md:min-h-0">
+                    <img src="./assets/temple.jpg" alt="Shiva Statue" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent pt-16 pb-6 px-6">
+                        <span class="text-white font-bold text-xl block drop-shadow-md">The 108-foot Shiva</span>
+                    </div>
+                </div>
+
+                <!-- Top Right Photo -->
+                <div class="md:col-span-2 md:row-span-1 relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-200 min-h-[250px] md:min-h-0">
+                    <img src="./assets/topview.jpg" alt="Temple Architecture" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent pt-12 pb-5 px-6">
+                        <span class="text-white font-bold text-lg block drop-shadow-md">Quiet and Peaceful</span>
+                    </div>
+                </div>
+
+                <!-- Bottom Right Photo 1 -->
+                <div class="md:col-span-1 md:row-span-1 relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-200 min-h-[250px] md:min-h-0">
+                    <img src="./assets/tea.jpg" alt="Himalayan Mountains" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent pt-12 pb-5 px-6">
+                        <span class="text-white font-bold text-lg block drop-shadow-md">Mountain Views</span>
+                    </div>
+                </div>
+
+                <!-- Bottom Right Photo 2 -->
+                <div class="md:col-span-1 md:row-span-1 relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group bg-gray-200 min-h-[250px] md:min-h-0">
+                    <img src="./assets/temp.jpg" alt="Holy Shrines" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent pt-12 pb-5 px-6">
+                        <span class="text-white font-bold text-lg block drop-shadow-md">Holy Shrines</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Information -->
+    <section id="visitor-info" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-sm text-primary-600 font-bold tracking-widest uppercase mb-2">Helpful Tips</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Information for Visitors</h3>
+            </div>
+
+            <div class="space-y-10">
+                
+                <!-- Section: Timings & Rules -->
+                <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
+                    <h4 class="text-2xl font-serif font-bold text-primary-600 mb-6 border-b border-gray-200 pb-4">When to Come & What to Do</h4>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h5 class="text-lg font-bold mb-4 flex items-center"><i class="fa-regular fa-clock text-secondary-500 mr-2"></i> Times & Prices</h5>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex justify-between border-b pb-2"><span>Opening Hours</span> <span class="font-semibold">8 AM to 7 PM</span></li>
+                                <li class="flex justify-between border-b pb-2"><span>Ticket Price</span> <span class="font-semibold">₹50 each</span></li>
+                                <li class="flex justify-between border-b pb-2"><span>Parking Fee</span> <span class="font-semibold">₹100 per car</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold mb-4 flex items-center"><i class="fa-solid fa-triangle-exclamation text-secondary-500 mr-2"></i> Important Rules</h5>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li><i class="fa-solid fa-circle-dot text-xs text-accent-500 mr-2"></i> <strong>Shoes:</strong> Take off your shoes before entering temples.</li>
+                                <li><i class="fa-solid fa-circle-dot text-xs text-accent-500 mr-2"></i> <strong>Clothes:</strong> Wear simple and decent clothes.</li>
+                                <li><i class="fa-solid fa-circle-dot text-xs text-accent-500 mr-2"></i> <strong>Quiet:</strong> Keep your voice low and don't use phones much.</li>
+                                <li><i class="fa-solid fa-circle-dot text-xs text-accent-500 mr-2"></i> <strong>No Bad Habits:</strong> No smoking or drinking alcohol.</li>
+                                <li><i class="fa-solid fa-circle-dot text-xs text-accent-500 mr-2"></i> <strong>Food:</strong> Only vegetarian food is served here.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Permits -->
+                <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
+                    <h4 class="text-2xl font-serif font-bold text-primary-600 mb-6 border-b border-gray-200 pb-4">Papers You Need</h4>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-xl border-l-4 border-accent-500 shadow-sm">
+                            <h5 class="text-lg font-bold mb-3">For Indians</h5>
+                            <p class="text-gray-600 mb-3">You don't need any special papers to enter. Just bring a government ID card like a Voter ID or Driving License for your hotel.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border-l-4 border-secondary-500 shadow-sm">
+                            <h5 class="text-lg font-bold mb-3">For Foreigners</h5>
+                            <p class="text-gray-600 mb-3">You need a paper called a <strong>Restricted Area Permit (RAP)</strong>. You can get it for free at the Sikkim border when you arrive. Bring your passport and photos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Accessibility -->
+                <div class="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200">
+                    <h4 class="text-2xl font-serif font-bold text-primary-600 mb-6 border-b border-gray-200 pb-4">Help for Everyone</h4>
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/3 text-center">
+                            <div class="w-24 h-24 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                                <i class="fa-solid fa-wheelchair"></i>
+                            </div>
+                            <h5 class="text-xl font-bold text-gray-900">Easy to Walk</h5>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <p class="text-gray-600 mb-4">
+                                This place is built for everyone. We have ramps for wheelchairs and small electric cars to take elders from one temple to another so nobody has to walk too much.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Accommodation -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-secondary-900 text-white p-6 md:p-8">
+                        <h4 class="text-2xl font-serif font-bold mb-2">Staying Here: Yatri Niwas</h4>
+                        <p class="text-secondary-100">A clean guest house right next to the temple.</p>
+                    </div>
+                    <div class="p-6 md:p-8 text-gray-600">
+                        <p class="mb-6">Stay right inside the temple gates to see the beautiful sunrise over the mountains and join the early morning prayers.</p>
+                        <div class="grid md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <h5 class="font-bold text-gray-900 mb-2">What you get:</h5>
+                                <ul class="space-y-2">
+                                    <li>Clean rooms for families</li>
+                                    <li>Pure vegetarian food</li>
+                                    <li>Free Wi-Fi and hot water</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-gray-900 mb-2">Note:</h5>
+                                <p class="bg-primary-50 p-4 rounded-lg border border-primary-100">This guest house is best for families. They prefer groups and families staying together.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasons & Weather -->
+    <section class="py-20 bg-gray-900 text-white relative">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544634076-a90160ddf44a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] opacity-20 bg-cover bg-fixed bg-center"></div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm text-primary-500 font-bold tracking-widest uppercase mb-2">Best Weather</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold">When to Visit?</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800/80 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-xl font-bold mb-1 text-accent-500">Spring</h4>
+                    <p class="text-xs text-gray-400 mb-4 tracking-wider">March to June</p>
+                    <p class="text-sm text-gray-300">Very nice weather. Lots of flowers and pleasant air. Best for walking around.</p>
+                </div>
+                
+                <div class="bg-secondary-900/90 p-6 rounded-xl border-secondary-500 shadow-[0_0_15px_rgba(59,130,246,0.3)] transform md:-translate-y-2">
+                    <h4 class="text-xl font-bold mb-1 text-primary-500">Autumn (Best)</h4>
+                    <p class="text-xs text-secondary-200 mb-4 tracking-wider">October to November</p>
+                    <p class="text-sm text-secondary-50">Clear blue skies. You can see the snow-covered mountains perfectly from here.</p>
+                </div>
+
+                <div class="bg-gray-800/80 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-xl font-bold mb-1 text-secondary-400">Winter</h4>
+                    <p class="text-xs text-gray-400 mb-4 tracking-wider">December to February</p>
+                    <p class="text-sm text-gray-300">It is very cold but the views are very sharp and clear. Wear heavy woolens!</p>
+                </div>
+
+                <div class="bg-gray-800/80 p-6 rounded-xl border border-gray-700">
+                    <h4 class="text-xl font-bold mb-1 text-red-400">Monsoon</h4>
+                    <p class="text-xs text-gray-400 mb-4 tracking-wider">July to September</p>
+                    <p class="text-sm text-gray-300">Lots of rain and mist. Roads can be slippery. Not the best time to visit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel & Connectivity -->
+    <section id="travel" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-sm text-secondary-600 font-bold tracking-widest uppercase mb-2">Travel</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">How to Get Here</h3>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+                <div class="lg:w-1/3">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-full">
+                        <h4 class="text-xl font-bold text-gray-900 mb-6 border-b pb-4">Nearest Places</h4>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <div class="bg-primary-50 w-12 h-12 rounded-full flex items-center justify-center text-primary-600 shrink-0"><i class="fa-solid fa-plane"></i></div>
+                                <div><strong>Bagdogra Airport</strong><br><span class="text-sm text-gray-600">5 hours away</span></div>
+                            </li>
+                            <li class="flex gap-4">
+                                <div class="bg-primary-50 w-12 h-12 rounded-full flex items-center justify-center text-primary-600 shrink-0"><i class="fa-solid fa-train"></i></div>
+                                <div><strong>NJP Railway Station</strong><br><span class="text-sm text-gray-600">4 hours away</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 overflow-x-auto h-full">
+                        <h4 class="text-xl font-bold text-gray-900 mb-6">Taxi Prices (Approx)</h4>
+                        <table class="w-full text-left border-collapse min-w-[400px]">
+                            <thead>
+                                <tr class="bg-gray-50 text-gray-700 text-sm">
+                                    <th class="p-4">From</th>
+                                    <th class="p-4">Private Car</th>
+                                    <th class="p-4">Shared Taxi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 divide-y divide-gray-100">
+                                <tr><td class="p-4">NJP / Bagdogra</td><td class="p-4">₹3,500 - ₹4,000</td><td class="p-4">₹500 - ₹600</td></tr>
+                                <tr><td class="p-4">Gangtok</td><td class="p-4">₹3,500 - ₹4,000</td><td class="p-4">₹400 - ₹500</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="max-w-6xl mx-auto mt-12 rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white">
+                <div class="p-4 bg-primary-50 border-b border-primary-100 flex items-center justify-between">
+                    <h4 class="font-bold text-primary-900 flex items-center">
+                        <i class="fa-solid fa-map-location-dot text-primary-500 mr-2 text-xl"></i> Plan to Visit
+                    </h4>
+                    <span class="text-sm text-primary-600 font-medium">Siddheshwar Dham, Namchi</span>
+                </div>
+                <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.1482294632424!2d88.34132597495561!3d27.151626049783495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e69d80ffffffff%3A0xa22bfc0eb9c76818!2sSiddheshwar%20Dham%20(Char%20Dham%20Mandir)!5e0!3m2!1sen!2sin!4v1775720361263!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section id="nearby" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm text-primary-600 font-bold tracking-widest uppercase mb-2">Other Places</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Nearby Spots to Visit</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200"><img src="./assets/Samdruptse.jpg" class="w-full h-full object-cover" alt="Samdruptse"></div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Samdruptse Hill</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">A very tall golden statue of a Buddhist saint. It's beautiful and very peaceful.</p>
+                        <div class="mt-auto pt-5"><a href="https://maps.app.goo.gl/tBvW5ywkpdEATzJQA" target="_blank" class="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold text-secondary-600 bg-secondary-50 border border-secondary-100 rounded-lg hover:bg-secondary-600 hover:text-white transition-all">View on Map</a></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200"><img src="./assets/Ngadak-Monastery.jpg" class="w-full h-full object-cover" alt="Monastery"></div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Ngadak Monastery</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">An old Buddhist monastery. People say if you visit once, you will surely come back to Namchi.</p>
+                        <div class="mt-auto pt-5"><a href="https://maps.app.goo.gl/4umbPkQs9NWWVNhQ6" target="_blank" class="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold text-secondary-600 bg-secondary-50 border border-secondary-100 rounded-lg hover:bg-secondary-600 hover:text-white transition-all">View on Map</a></div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200"><img src="./assets/Temi.jpg" class="w-full h-full object-cover" alt="Tea Garden"></div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Temi Tea Garden</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">A big green garden where we grow organic tea. It is one of the most beautiful spots in Sikkim.</p>
+                        <div class="mt-auto pt-5"><a href="https://maps.app.goo.gl/tneezfHwYjLUNc8m8" target="_blank" class="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold text-secondary-600 bg-secondary-50 border border-secondary-100 rounded-lg hover:bg-secondary-600 hover:text-white transition-all">View on Map</a></div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200"><img src="./assets/Ropeway.jpg" class="w-full h-full object-cover" alt="Ropeway"></div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Ropeway</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Take a ride in a cable car to see the whole town and the mountains from up high.</p>
+                        <div class="mt-auto pt-5"><a href="https://maps.app.goo.gl/mUXrsvG2ovLHKCBK7" target="_blank" class="flex items-center justify-center w-full px-4 py-2 text-sm font-semibold text-secondary-600 bg-secondary-50 border border-secondary-100 rounded-lg hover:bg-secondary-600 hover:text-white transition-all">View on Map</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h5 class="text-white text-xl font-serif font-bold mb-2">Siddheshwar Dham</h5>
+                    <p class="text-sm">Namchi, South Sikkim.</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm mb-1">Built by:</p>
+                    <a href="#" class="text-white font-bold text-lg hover:text-primary-500">Mahsua Technology</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-xs">
+                &copy; <span id="year"></span> Siddheshwar Dham Portal.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { navbar.classList.add('nav-scrolled'); } 
+            else { navbar.classList.remove('nav-scrolled'); }
+        });
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
+</body>
+</html>
